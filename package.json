@@ -1,0 +1,95 @@
+{
+  "name": "desktopper",
+  "description": "A desktop app for Organizing your time and tasks.",
+  "author": "desktopper",
+  "version": "1.11.16",
+  "private": true,
+  "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "@paymoapp/electron-shutdown-handler": "^1.0.14",
+    "@reduxjs/toolkit": "^1.9.5",
+    "active-win": "^8.1.0",
+    "antd": "^5.8.5",
+    "axios": "^1.4.0",
+    "bootstrap": "^5.3.0",
+    "browser-env": "^3.3.0",
+    "cross-env": "6.0.2",
+    "electron-installer-dmg": "^4.0.0",
+    "electron-is-dev": "1.1.0",
+    "electron-localshortcut": "^3.2.1",
+    "electron-log": "^3.0.9",
+    "electron-store": "^8.1.0",
+    "electron-updater": "^6.1.4",
+    "make-fetch-happen": "^11.1.1",
+    "os": "^0.1.2",
+    "react": "^16.8.6",
+    "react-app-rewired": "^2.2.1",
+    "react-bootstrap": "^2.8.0",
+    "react-dom": "^16.8.6",
+    "react-icons": "^4.10.1",
+    "react-internet-meter": "^1.1.1",
+    "react-redux": "^8.1.1",
+    "react-router-dom": "^6.14.1",
+    "react-toastify": "^8.1.0",
+    "redux": "^4.2.1",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.4.2",
+    "update-electron-app": "^1.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "4.1.2",
+    "electron": "^27.0.0",
+    "electron-builder": "^21.2.0",
+    "electron-devtools-installer": "^3.2.0",
+    "electron-winstaller": "^5.1.0",
+    "electron-wix-msi": "^5.0.0",
+    "grunt": "^1.6.1",
+    "grunt-electron-installer": "^2.1.0",
+    "prettier": "^1.4.4",
+    "react-scripts": "3.1.2",
+    "tailwindcss": "^3.3.2",
+    "wait-on": "3.3.0"
+  },
+  "engines": {
+    "node": "18.16.1"
+  },
+  "build": {
+    "appId": "com.desktopper.app",
+    "productName": "desktopper",
+    "directories": {
+      "output": "desktopper-build",
+      "buildResources": "build-assets"
+    },
+    "icon": "./assets/icons/win/icon.png",
+    "win": {
+      "target": [
+        "nsis",
+        "msi"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inceptionabhishek/desktopper"
+  },
+  "main": "public/electron.js",
+  "homepage": "./",
+  "scripts": {
+    "react:dev": "cross-env BROWSER=none react-scripts --openssl-legacy-provider start",
+    "electron:dev": "electron .",
+    "dev": "concurrently \"npm run react:dev\" \"wait-on http://localhost:3000 && npm run electron:dev\"",
+    "build": "react-scripts --openssl-legacy-provider build",
+    "package-win": "electron-packager . desktopper --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"desktopper\"",
+    "exe-make": "npm run build && npm run package-win && node build_installer.js",
+    "package-mac": "electron-packager . --overwrite --asar=true --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "build:prod": "npm run build && electron-builder --win",
+    "package-linux": "electron-packager . desktopper --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/linux/icon.png --prune=true --out=release-builds",
+    "create-debian-installer": "electron-installer-debian --src ./release-builds/desktopper-linux-x64/ --arch amd64 --config debian.json"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ]
+}

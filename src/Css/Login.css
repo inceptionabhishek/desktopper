@@ -1,0 +1,95 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url("../assets/loginbackground.png");
+}
+.card-login {
+  width: 400px;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  background-color: rgb(81, 118, 142);
+  color: #fff;
+}
+
+h2 {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 300px;
+  font-size: 14px;
+}
+
+button {
+  padding: 14px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(26, 38, 46);
+}
+.heading_login {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.email_text {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* CSS for passoword_text class */
+.passoword_text {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.login_btn {
+  display: inline-block;
+  padding: 14px 20px;
+  font-size: 14px;
+  background-color: #171d28;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login_btn:hover {
+  background-color: #0056b3;
+}
+
+.login_btn:focus {
+  outline: none;
+}
