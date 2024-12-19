@@ -1,0 +1,10 @@
+.sidebar {
+  z-index: 2;
+}
+.sidebar {
+  background: rgba(54, 69, 79, 1);
+}
+
+.sidebar .logo {
+  font-family: "Poppins", sans-serif;
+}

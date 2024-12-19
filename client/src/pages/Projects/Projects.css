@@ -1,0 +1,69 @@
+.create-project-btn {
+  background: rgba(0, 150, 235, 1);
+  border-radius: 16px;
+  padding: 13px 43px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.search-member-input {
+  display: flex;
+  width: 335px;
+  align-items: center;
+  position: relative;
+}
+
+.search-member-input input {
+  width: 100%;
+  height: 48px;
+  left: 303px;
+  top: 304px;
+  background: #ffffff;
+  border: 0.5px solid rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+  outline: none;
+  padding: 13px 30px;
+}
+
+.tab {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #808080;
+  padding: 1rem;
+  border-bottom: 1px solid #cacccb;
+}
+
+.tab.tab-active {
+  border-bottom: 3px solid rgba(0, 150, 235, 1);
+  color: rgba(0, 150, 235, 1);
+}
+
+.search-member-input img {
+  position: absolute;
+  right: 10px;
+}
+
+.approve-btn {
+  background-color: #eef6e9;
+  font-family: "Poppins", sans-serif;
+
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: #2f4c5f;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.hovertable:hover {
+  transform: scale(1.009);
+  background-color: #f6f1f1;
+}

@@ -1,0 +1,35 @@
+.join-workspace-container {
+  width: 100%;
+  max-width: 642px;
+  box-shadow: 15px 15px 60px rgba(202, 0, 73, 0.1);
+  border-radius: 40px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.code-wrapper {
+  display: flex;
+  gap: 33px;
+}
+
+.code-container {
+  height: 70px;
+  border: 0.5px solid rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  gap: 40px;
+}
+
+.code-container-seperate {
+  height: 60%;
+  width: 1px;
+  background: #808080;
+}
+
+/* .unside-down-rectangle {
+  background-image: url("../../assets/Rectangle\ 2.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+} */

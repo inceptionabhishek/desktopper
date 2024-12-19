@@ -1,0 +1,29 @@
+.calendar-container {
+    /* Your styling for the Calendar container */
+    display: flex;
+    flex-direction: row;
+    /* For horizontal display */
+    justify-content: flex-start;
+    /* Align to the start (left) */
+    align-items: center;
+    /* Center vertically */
+    /* gap: 10px; */
+    width: 100%;
+
+}
+
+/* If you want the Calendar to display vertically at smaller screens */
+@media (max-width: 768px) {
+    .calendar-container {
+        flex-direction: column;
+        /* For vertical display */
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    /* Two columns with auto width */
+    gap: 10px;
+    align-items: flex-end;
+}
