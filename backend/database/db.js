@@ -162,7 +162,7 @@ const modes = {
   readReportByUserIdAndDate,
 };
 
-const client = new MongoClient(uri, {
+const client = new MongoClient(process.env.MONGO_DB, {
   serverApi: {
     version: ServerApiVersion.v1,
     strict: true,

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import desktopper from "../../assets/desktopper.png";
+import desktopper from "../../assets/Timemount.png";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 const ThankYou = () => {
